@@ -1,3 +1,11 @@
+# e-commerce-site
+
+<!-- TODO -->
+
+### Front-end Development
+
+[ ] Scaffolding e-commerce app with create-react-app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
