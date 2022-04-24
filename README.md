@@ -4,7 +4,7 @@
 
 ### Front-end Development
 
-[ ] Scaffolding e-commerce app with create-react-app
+- [ ] Scaffolding e-commerce app with create-react-app
 
 # Getting Started with Create React App
 
