@@ -6,6 +6,7 @@
 
 - [x] Scaffolding e-commerce app with create-react-app
 - [x] Create the homepage layout
+- [x] Install SASS
 
 # Getting Started with Create React App
 
