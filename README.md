@@ -7,6 +7,13 @@
 - [x] Scaffolding e-commerce app with create-react-app
 - [x] Create the homepage layout
 - [x] Install SASS
+- [x] Install React Router Dom
+  - Home page
+  - Shop page
+  - Sign in Page
+  - Cart page
+  - Checkout page
+- [x] Install Firebase for authentication
 
 # Getting Started with Create React App
 
