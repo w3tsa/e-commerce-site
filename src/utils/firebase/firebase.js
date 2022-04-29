@@ -4,17 +4,18 @@ import {
   signInWithRedirect,
   signInWithPopup,
   GoogleAuthProvider,
+  createUserWithEmailAndPassword,
 } from "firebase/auth";
 
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_Id,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  apiKey: "AIzaSyAokK9gsSRaZ4uPqpUfO_qRZ2Wz-7f8Nuc",
+  authDomain: "e-commerce-db-31852.firebaseapp.com",
+  projectId: "e-commerce-db-31852",
+  storageBucket: "e-commerce-db-31852.appspot.com",
+  messagingSenderId: "872475977443",
+  appId: "1:872475977443:web:4c2145be34239d9217c7d6",
 };
 const app = initializeApp(firebaseConfig);
 
@@ -25,10 +26,12 @@ provider.setCustomParameters({
 
 const auth = getAuth();
 const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+const signInWithGoogleRedirect = () => signInWithRedirect(auth, provider);
 
 const db = getFirestore();
 
-const createUserDocumentFromAuth = async (userAuth) => {
+const createUserDocumentFromAuth = async (userAuth, additionalInformation) => {
+  if (!userAuth) return;
   const userDocRef = doc(db, "users", userAuth.uid);
   const userSnapshot = await getDoc(userDocRef);
 
@@ -42,6 +45,7 @@ const createUserDocumentFromAuth = async (userAuth) => {
         displayName,
         email,
         createdAt,
+        ...additionalInformation,
       });
     } catch (error) {
       console.log("error creating the user", error.message);
@@ -51,4 +55,15 @@ const createUserDocumentFromAuth = async (userAuth) => {
   return userDocRef;
 };
 
-export { auth, signInWithGooglePopup, createUserDocumentFromAuth };
+const createAuthUserWithEmailAndPassword = async (email, password) => {
+  if (!email || !password) return;
+  return await createUserWithEmailAndPassword(auth, email, password);
+};
+
+export {
+  auth,
+  signInWithGooglePopup,
+  signInWithGoogleRedirect,
+  createUserDocumentFromAuth,
+  createAuthUserWithEmailAndPassword,
+};
