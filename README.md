@@ -13,8 +13,11 @@
   - Sign in Page
   - Cart page
   - Checkout page
-- [x] Create the sign up page
+- [x] Build the sign up page functionality
 - [x] Style the sign up page with sass
+- [x] Refactor component:
+  - [x] Create reusable form-input component
+  - [x] Create reusable button component
 
 ### Back-end Development
 
