@@ -14,6 +14,7 @@
   - Cart page
   - Checkout page
 - [x] Install Firebase for authentication
+- [x] Create the sign up page
 
 # Getting Started with Create React App
 

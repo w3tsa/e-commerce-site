@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 // local import
+import FormInput from "../form_input/FormInput";
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
@@ -34,6 +35,7 @@ const SignUp = () => {
         password
       );
       await createUserDocumentFromAuth(user, { displayName });
+      setFormFields(defaultFormFields);
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         alert("Email is already exist");
@@ -45,17 +47,17 @@ const SignUp = () => {
     <div>
       <h1>Sign up with your email and password</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Display Name</label>
-        <input
+        <FormInput
+          label={"Display Name"}
           type="text"
           name="displayName"
           value={displayName}
-          required
           onChange={handleChange}
+          required
         />
 
-        <label htmlFor="">Email</label>
-        <input
+        <FormInput
+          label={"Email"}
           type="email"
           name="email"
           value={email}
@@ -63,8 +65,8 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <label htmlFor="">Password</label>
-        <input
+        <FormInput
+          label={"Password"}
           type="password"
           name="password"
           value={password}
@@ -72,8 +74,8 @@ const SignUp = () => {
           onChange={handleChange}
         />
 
-        <label htmlFor="">Confirm Password</label>
-        <input
+        <FormInput
+          label={"Confirm Password"}
           type="password"
           name="confirmPassword"
           value={confirmPassword}
