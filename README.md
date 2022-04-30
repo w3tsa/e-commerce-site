@@ -13,8 +13,18 @@
   - Sign in Page
   - Cart page
   - Checkout page
-- [x] Install Firebase for authentication
 - [x] Create the sign up page
+- [x] Style the sign up page with sass
+
+### Back-end Development
+
+- [x] Create Firebase project
+- [x] Create Firebase config file
+- [x] Install .env & hide Config info
+- [x] Add firebase Auth
+- [x] Create sign up with GoogleAuthProvider
+- [x] Add firebase DB for user email and password
+- [x] Create sign up with createUserWithEmailAndPassword
 
 # Getting Started with Create React App
 
