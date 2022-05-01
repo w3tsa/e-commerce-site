@@ -1,6 +1,6 @@
 // local imports
 import Home from "./routes/home/Home";
-import SignIn from "./routes/sign_in/SignIn";
+import Authentication from "./routes/authentication/Authentication";
 
 // routing
 import { Routes, Route } from "react-router-dom";
@@ -11,7 +11,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />}></Route>
-        <Route path="sign-in" element={<SignIn />}></Route>
+        <Route path="sign-in" element={<Authentication />}></Route>
       </Route>
     </Routes>
   );

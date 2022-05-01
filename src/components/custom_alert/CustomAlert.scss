@@ -1,0 +1,27 @@
+.error-message-alert-container {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  animation: show 0.3s forwards;
+  .error-message-alert-inner-container {
+    width: 500px;
+    background: rgb(233, 230, 230);
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 2px 5px;
+    h3 {
+      color: rgb(94, 6, 6);
+      text-align: center;
+    }
+  }
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}

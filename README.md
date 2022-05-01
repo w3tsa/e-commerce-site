@@ -18,16 +18,19 @@
 - [x] Refactor component:
   - [x] Create reusable form-input component
   - [x] Create reusable button component
+  - [x] Create reusable custom alert component
+- [x] Create authentication functionality with sign in ability
 
-### Back-end Development
+### Back-end Development.
 
-- [x] Create Firebase project
-- [x] Create Firebase config file
-- [x] Install .env & hide Config info
-- [x] Add firebase Auth
-- [x] Create sign up with GoogleAuthProvider
-- [x] Add firebase DB for user email and password
-- [x] Create sign up with createUserWithEmailAndPassword
+- [x] User Sign in/Sign up functionality
+  - [x] Create Firebase project
+  - [x] Create Firebase config file
+  - [x] Install .env & hide Config info
+  - [x] Add firebase Auth
+  - [x] Create sign up with GoogleAuthProvider
+  - [x] Add firebase DB for user email and password
+  - [x] Create sign up with createUserWithEmailAndPassword
 
 # Getting Started with Create React App
 
