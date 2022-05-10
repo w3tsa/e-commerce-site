@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 // local import
 import FormInput from "../form_input/FormInput";
@@ -10,6 +10,8 @@ import {
   createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword,
 } from "../../utils/firebase/firebase";
+
+import { UserContext } from "../../contexts/User";
 
 // styles
 import "./SignIn.scss";
@@ -24,6 +26,8 @@ const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const { email, password } = formFields;
 
+  const { seCurrentUser } = useContext(UserContext);
+
   function handleChange(event) {
     const { name, value } = event.target;
     setFormFields({ ...formFields, [name]: value });
@@ -32,11 +36,11 @@ const SignIn = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
+      seCurrentUser(user);
       setFormFields(defaultFormFields);
       setErrorMessage("");
     } catch (error) {

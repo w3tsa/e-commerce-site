@@ -20,10 +20,13 @@
   - [x] Create reusable button component
   - [x] Create reusable custom alert component
 - [x] Create authentication functionality with sign in ability
+- [x] Create custom error message component
+- [x] Adding react context
+  - [ ] Navigation component change the sign in link to sign out if user log out
 
 ### Back-end Development.
 
-- [x] User Sign in/Sign up functionality
+- [x] User Sign in/Sign up functionality with Firebase Auth and Firestore Auth
   - [x] Create Firebase project
   - [x] Create Firebase config file
   - [x] Install .env & hide Config info

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 // local import
 import FormInput from "../form_input/FormInput";
@@ -8,6 +8,8 @@ import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/firebase/firebase";
+
+import { UserContext } from "../../contexts/User";
 
 // styles
 import "./SignUp.scss";
@@ -23,6 +25,10 @@ const SignUp = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const [errorMessage, setErrorMessage] = useState("");
   const { displayName, email, password, confirmPassword } = formFields;
+
+  const val = useContext(UserContext);
+
+  console.log("hit");
 
   function handleChange(event) {
     const { name, value } = event.target;
