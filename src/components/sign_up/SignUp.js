@@ -26,7 +26,7 @@ const SignUp = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const { displayName, email, password, confirmPassword } = formFields;
 
-  const val = useContext(UserContext);
+  const { seCurrentUser } = useContext(UserContext);
 
   console.log("hit");
 
@@ -46,6 +46,7 @@ const SignUp = () => {
         email,
         password
       );
+      seCurrentUser(user);
       await createUserDocumentFromAuth(user, { displayName });
       setFormFields(defaultFormFields);
       setErrorMessage("");

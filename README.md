@@ -22,7 +22,7 @@
 - [x] Create authentication functionality with sign in ability
 - [x] Create custom error message component
 - [x] Adding react context
-  - [ ] Navigation component change the sign in link to sign out if user log out
+  - [x] Navigation component change the sign in link to sign out if user log out
 
 ### Back-end Development.
 
