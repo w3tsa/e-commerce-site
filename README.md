@@ -34,6 +34,8 @@
   - [x] Create sign up with GoogleAuthProvider
   - [x] Add firebase DB for user email and password
   - [x] Create sign up with createUserWithEmailAndPassword
+  - [x] Sign out a user with Sign out function from firebase
+  - [x] Centralized the auth functions
 
 # Getting Started with Create React App
 
