@@ -21,8 +21,13 @@
   - [x] Create reusable custom alert component
 - [x] Create authentication functionality with sign in ability
 - [x] Create custom error message component
-- [x] Adding react context
+- [x] Adding react context(user context)
   - [x] Navigation component change the sign in link to sign out if user log out
+  <!-- Shop page -->
+- [x] Added some dummy produtcs data
+- [x] Create the route for Shop page
+- [x] Created the products context
+- [x] Show the products name from the produtcs context onto the Shop page
 
 ### Back-end Development.
 
