@@ -34,6 +34,12 @@
 - [x] Build the mini cart
   - [x] cart icon component which will show the total items
   - [x] cart dropdown component which will show, item image, quantity, total price
+  <!-- checkout page -->
+- [x] create checkout page
+  - [x] checkout page will have all the items listed
+  - [x] checkout page will have items to increament and decrement
+  - [x] checkout page will have the total
+- [x] add states to cart context: removeItemFromCart, clearItemFromCart, cartTotal,
 
 ### Back-end Development.
 
