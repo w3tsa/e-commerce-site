@@ -28,10 +28,17 @@
 - [x] Create the route for Shop page
 - [x] Created the products context
 - [x] Show the products name from the produtcs context onto the Shop page
+<!-- Cart -->
+- [x] Created the cart context
+  - [x] state: isCartOpen, setIsCartOpen, cartItems, addItemToCart, cartCount
+- [x] Build the mini cart
+  - [x] cart icon component which will show the total items
+  - [x] cart dropdown component which will show, item image, quantity, total price
 
 ### Back-end Development.
 
 - [x] User Sign in/Sign up functionality with Firebase Auth and Firestore Auth
+
   - [x] Create Firebase project
   - [x] Create Firebase config file
   - [x] Install .env & hide Config info
@@ -41,6 +48,8 @@
   - [x] Create sign up with createUserWithEmailAndPassword
   - [x] Sign out a user with Sign out function from firebase
   - [x] Centralized the auth functions
+
+  <!-- CRA DEFAULT README -->
 
 # Getting Started with Create React App
 
