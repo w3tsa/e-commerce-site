@@ -55,7 +55,9 @@
   - [x] Sign out a user with Sign out function from firebase
   - [x] Centralized the auth functions
 
-  <!-- CRA DEFAULT README -->
+- [x] Set up the firebase database with the shop data
+
+<!-- CRA DEFAULT README -->
 
 # Getting Started with Create React App
 
