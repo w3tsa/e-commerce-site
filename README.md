@@ -39,7 +39,9 @@
   - [x] checkout page will have all the items listed
   - [x] checkout page will have items to increament and decrement
   - [x] checkout page will have the total
-- [x] add states to cart context: removeItemFromCart, clearItemFromCart, cartTotal,
+- [x] add states to cart context: removeItemFromCart, clearItemFromCart, cartTotal
+- [x] Craeted the category preview page
+- [x] Created the nested routs within shop page to go to different categories
 
 ### Back-end Development.
 

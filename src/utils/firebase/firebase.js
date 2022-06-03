@@ -18,6 +18,8 @@ import {
   setDoc,
   collection,
   writeBatch,
+  query,
+  getDocs,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -52,7 +54,22 @@ const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
   });
 
   await batch.commit();
-  console.log("done");
+  // console.log("done");
+};
+
+const getCategoriesAndDocuments = async () => {
+  const collectionRef = collection(db, "category");
+  const q = query(collectionRef);
+
+  const querySnapshot = await getDocs(q);
+
+  const categoryMap = querySnapshot.docs.reduce((acc, docSnapshot) => {
+    const { title, items } = docSnapshot.data();
+    acc[title.toLowerCase()] = items;
+    return acc;
+  }, {});
+
+  return categoryMap;
 };
 
 const createUserDocumentFromAuth = async (userAuth, additionalInformation) => {
@@ -105,4 +122,5 @@ export {
   signOutUser,
   onAuthStateChangedListener,
   addCollectionAndDocuments,
+  getCategoriesAndDocuments,
 };
