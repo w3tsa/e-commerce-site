@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // local import
 import FormInput from "../form_input/FormInput";
-import Button from "../button/Button";
+import Button, { BUTTON_TYPES_CLASSES } from "../button/Button";
 import CustomAlert from "../custom_alert/CustomAlert";
 import {
   createAuthUserWithEmailAndPassword,
@@ -80,7 +80,11 @@ const SignIn = () => {
         />
         <div className="buttons-container">
           <Button type="submit">Sign in</Button>
-          <Button type="button" buttonType="google" onClick={signInWithGoogle}>
+          <Button
+            type="button"
+            buttonType={BUTTON_TYPES_CLASSES.google}
+            onClick={signInWithGoogle}
+          >
             Google Sign in
           </Button>
         </div>
